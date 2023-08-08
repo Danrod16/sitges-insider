@@ -1,0 +1,27 @@
+<% content_for :header do %>
+    <header class="bg-cover bg-center relative bg-no-repeat" style="background-image: url(<%= asset_url("fusion.png") %>);" data-controller="nav">
+        <div class="dark:bg-slate-900 relative">
+        <%= render "shared/nav_menu" %>
+        </div>
+
+    <div class="container mx-auto px-4">
+        <div class="text-center py-20 relative z-20">
+        <p class="font-semibold text-center uppercase text-sm text-indigo-600 mb-4 dark:text-indigo-500">🔴 Live</p>
+        <h1 class="lg:text-5xl text-4xl text-slate-900 font-extrabold mb-4 dark:text-slate-50">Sitges Aiguadolç livecam</h1>
+        <p class="text-lg text-slate-700 dark:text-slate-200 max-w-xl mx-auto">This webcam is located in Aiguadolç, Sitges. Streaming at 1080p(HD) 24/7</p>
+        </div>
+    </div>
+    </header>
+
+<div class="bg-slate-900 dark:bg-slate-800 py-16 text-slate-100 px-4" id="webcam-section">
+  <div class="container mx-auto text-center">
+    <div class="flex items-center justify-center" id="myVideo" class="w-250 h-150 mb-2">
+      <div><iframe width="640" height="480" src="https://rtsp.me/embed/AhGydysa/" frameborder="0" allowfullscreen></iframe></div>
+    </div>
+    <blockquote class="text-center font-light text-lg">
+      <cite class="mt-2 block font-semibold text-white">Playa de Aiguadolç Webcam</cite>
+    Aiguadolç Beach, or "Sweetwater Beach" in translation, sits just behind Sitges harbor, offering a refreshing ambiance and a prime spot for surfing waves. Framed by picturesque mountains, this family-friendly beach is a haven for surf enthusiasts. With lifeguard services ensuring safety in the surf, easy access ramps, and charming surfside shacks, it's the perfect place to catch some waves. Lounge under umbrellas, try pedal-powered surfboards, and enjoy the convenience of nearby parking and harbor amenities. Aiguadolç Beach invites you to embrace the thrill of the surf while savoring a complete seaside experience.
+    </blockquote>
+  </div>
+</div>
+<% end %>

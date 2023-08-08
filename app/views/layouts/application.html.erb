@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SitgesInsider</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "application", "https://unpkg.com/trix@2.0.0/dist/trix.css", "data-turbo-track": "reload" %>
+    
+    <%= render "shared/meta" %>
+    <%= yield :head %>
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+
+</head>
+
+  <body class="rui">
+    <%= render "shared/flash" %>
+    <% if content_for(:header).present? %>
+      <%= yield :header %>
+    <% else %>
+      <%= render "shared/nav" %>
+    <% end %>
+    <%= yield %>
+    <%= railsui_launcher if Rails.env.development? %>
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+  </body>
+</html>

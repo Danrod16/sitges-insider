@@ -1,0 +1,5 @@
+--- !ruby/object:Railsui::Configuration
+application_name: Sitges insider
+css_framework: tailwind
+support_email: info@sitgesinsider.com
+theme: hound
